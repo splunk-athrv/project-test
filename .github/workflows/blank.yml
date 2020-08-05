@@ -31,3 +31,8 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+
+    - name: Compile test
+      run: |
+        echo $GITHUB_WORKSPACE
+
