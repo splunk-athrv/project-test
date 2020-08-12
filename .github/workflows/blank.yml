@@ -35,6 +35,7 @@ jobs:
     - name: Compile test
       run: |
         cd ..
+        pwd
         python compile_test.py phipinfo
 
 
