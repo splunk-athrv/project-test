@@ -37,6 +37,7 @@ jobs:
         cd .github
         pwd
         ls
+        pip install paramiko
         python compile_test.py phipinfo
 
 
