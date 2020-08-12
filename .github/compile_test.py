@@ -10,11 +10,13 @@ username = "root"
 password = "phantom"
 
 four_nine_client = paramiko.SSHClient()
-four_nine_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+four_nine_client.load_system_host_keys()
+#four_nine_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 four_nine_client.connect(hostname=four_nine_host, username=username, password=password)
 
 four_eight_client = paramiko.SSHClient()
-four_eight_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+four_eight_client.load_system_host_keys()
+#four_eight_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 four_eight_client.connect(hostname=four_eight_host, username=username, password=password)
 
 app_name = ""
