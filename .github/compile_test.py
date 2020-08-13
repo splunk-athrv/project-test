@@ -11,11 +11,11 @@ password = "phantom"
 
 four_nine_client = paramiko.SSHClient()
 four_nine_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-four_nine_client.connect(hostname=four_nine_host, username=username, password=password)
+four_nine_client.connect(hostname=four_nine_host, username=username, password=password, port=port)
 
 four_eight_client = paramiko.SSHClient()
 four_eight_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-four_eight_client.connect(hostname=four_eight_host, username=username, password=password)
+four_eight_client.connect(hostname=four_eight_host, username=username, password=password, port=port)
 
 app_name = ""
 
@@ -41,7 +41,7 @@ def run_four_eight_test():
     stdin, stdout, stderr = four_eight_client.exec_command(commands)
 
     lines = stdout.readlines()
-    print("4.8 output: ")
+    print("4.8 output:  ")
 
     for line in lines:
         print(line)
